@@ -4,6 +4,22 @@
 {% block content %}
 <h1>{{project.title}}</h1>
 
+{% for tag in tags %}
+
+<span>{{tag}}</span>
+
+{% endfor %}
+
+<hr>
+
 <p>{{project.description}}</p>
+
+
+<hr>
+
+<h3>Reviews:</h3>
+{% for review in reviews %}
+    <p>{{review.body}}</p>
+{% endfor %}
 
 {% endblock content %}
