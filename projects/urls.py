@@ -1,12 +1,12 @@
 from django.urls import path
-from .views import *
+from . import views
 
 
 
 
 
 urlpatterns = [
-    path('',projects, name='projects'),
-    # path('projects/', projects),
-    path('project/<str:pk>', project, name='project')
+    path('',views.projects, name='projects'),
+    path('project/<str:pk>', views.project, name='project'),
+    path('create-project/', views.createProject, name='create-project' ),
 ]
